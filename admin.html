@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>XShare – Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body onload="hydrateLayout('admin'); guardAdmin(); loadAdminData();">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="brand-small">XShare</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="share.html">Share Experience</a>
+        <a href="experiences.html">Browse Experiences</a>
+        <a href="myposts.html">My Posts</a>
+        <a href="admin.html" class="active">Admin</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <h1>Admin Panel</h1>
+
+      <section class="card">
+        <h2>Pending Experiences</h2>
+        <div id="pendingExperiences" class="card-list"></div>
+      </section>
+
+      <section class="card">
+        <h2>Pending Questions</h2>
+        <div id="pendingQuestions" class="card-list"></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>

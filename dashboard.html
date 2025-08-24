@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>XShare – Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body onload="hydrateLayout('dashboard')">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="brand-small">XShare</h2>
+      <nav>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="share.html">Share Experience</a>
+        <a href="experiences.html">Browse Experiences</a>
+        <a href="myposts.html">My Posts</a>
+        <a id="adminLink" href="admin.html" style="display:none;">Admin</a>
+        <a href="#" onclick="logoutUser()">Logout</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <h1>Welcome</h1>
+      <p>Select an option from the sidebar to get started.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Share your latest interview</h3>
+          <p>Help juniors learn from real experiences.</p>
+          <a class="btn" href="share.html">Share Now</a>
+        </div>
+        <div class="card">
+          <h3>Browse experiences</h3>
+          <p>Filter by company, rounds, and more.</p>
+          <a class="btn" href="experiences.html">Explore</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>

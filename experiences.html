@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>XShare – Experiences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body onload="hydrateLayout('experiences'); renderApprovedExperiences();">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="brand-small">XShare</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="share.html">Share Experience</a>
+        <a href="experiences.html" class="active">Browse Experiences</a>
+        <a href="myposts.html">My Posts</a>
+        <a id="adminLink" href="admin.html" style="display:none;">Admin</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <h1>Interview Experiences</h1>
+
+      <div class="card">
+        <div class="grid-3">
+          <input id="filterCompany" type="text" placeholder="Filter by Company" oninput="renderApprovedExperiences()" />
+          <select id="filterRounds" onchange="renderApprovedExperiences()">
+            <option value="">All Rounds</option>
+            <option value="1">1 Round</option>
+            <option value="2">2 Rounds</option>
+            <option value="3">3 Rounds</option>
+            <option value="4">4+ Rounds</option>
+          </select>
+          <input id="filterCTC" type="text" placeholder="Filter by CTC (e.g., 10 LPA)" oninput="renderApprovedExperiences()" />
+        </div>
+      </div>
+
+      <div id="experienceList" class="card-list"></div>
+    </main>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
