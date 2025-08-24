@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XShare - Register</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="auth-container">
+    <h1>XShare</h1>
+    <h2>Register</h2>
+    <form onsubmit="event.preventDefault(); registerUser(
+      document.getElementById('regUsername').value,
+      document.getElementById('regEmail').value,
+      document.getElementById('regPassword').value,
+      document.getElementById('regRole').value
+    ); alert('Registration successful! You can now log in.'); window.location.href='index.html';">
+      <input id="regUsername" type="text" placeholder="Username" required />
+      <input id="regEmail" type="email" placeholder="Email" required />
+      <input id="regPassword" type="password" placeholder="Password" required />
+      <select id="regRole" required>
+        <option value="student">Student</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="index.html">Login here</a></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

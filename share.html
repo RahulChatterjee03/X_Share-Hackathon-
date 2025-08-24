@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>XShare – Share Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body onload="hydrateLayout('share')">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="brand-small">XShare</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="share.html" class="active">Share Experience</a>
+        <a href="experiences.html">Browse Experiences</a>
+        <a href="myposts.html">My Posts</a>
+        <a id="adminLink" href="admin.html" style="display:none;">Admin</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <h1>Share Interview Experience</h1>
+      <form class="card" onsubmit="submitExperience(event)">
+        <div class="grid-2">
+          <input id="companyName" type="text" placeholder="Company Name" required />
+          <input id="jobRole" type="text" placeholder="Job Role (optional)" />
+        </div>
+        <div class="grid-2">
+          <input id="rounds" type="number" min="1" placeholder="Number of Rounds" required />
+          <input id="ctc" type="text" placeholder="CTC Offered (e.g., ₹10 LPA)" required />
+        </div>
+        <textarea id="questions" placeholder="Probable questions / topics asked…" rows="5" required></textarea>
+        <textarea id="advice" placeholder="Your expert advice…" rows="4" required></textarea>
+        <button type="submit">Submit for Verification</button>
+      </form>
+    </main>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
